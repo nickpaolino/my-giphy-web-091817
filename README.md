@@ -39,7 +39,7 @@ Using the Giphy API is actually quite simple!
 [sign up here](https://developers.giphy.com/). Go to your upper right hand
 corner and click **Log in**. At the bottom of the login form there is a message
 that says **"Don't Have An Account? Ew. Join Giphy!"**, click there and sign-up;
-it only takes a few seconds!. After signing up
+it only takes a few seconds! After signing up
 [click here](https://developers.giphy.com/), click on **Create an App**, it
 should be on the upper right hand side. It will prompt you to give your app a
 name and a description. Fill in those text boxes and click the **Create New
@@ -48,12 +48,12 @@ on your dashboard in your giphy account.
 
 ### How to do fetch request to the Giphy API?
 
-If you dont feel the need to read this instructions you can get the
-documentation [here](https://developers.giphy.com/docs/). Clik on **Code
+If you dont feel the need to read these instructions you can get the
+documentation [here](https://developers.giphy.com/docs/); click on **Code
 Examples** on your left hand side.
 
-* First store your api key in a variable, along with the url. We do this because
-  we will reuse it for the **search** & **trending**.
+* First store your api key in a variable, as well as with the url. We do this
+  because we will use it for **search** & **trending**.
 
 ```
 const KEY = "SOME-API-KEY";
@@ -83,4 +83,10 @@ fetch(`${URL}search?api_key=${KEY}&q=${search}`)
 const search = "the-user-search"
 const limit = "5"
 fetch(`${URL}search?api_key=${KEY}&q=${search}&limit=${limit}`)
+```
+
+* Thats it! make the request and your response should look like this:
+
+```
+{data: Array(25), pagination: {…}, meta: {…}}
 ```
